@@ -15,14 +15,14 @@ def characters_occurrence_in(text):
 
     return character_occurrence
 
-def sort_characters_descending(dictionary):
-    characters_list = []
+def sort_characters_occurrence_descending(dictionary):
+    sorted_characters = []
     def sort_on(items):
         return items["num"]
 
     for character in dictionary:
-        characters_list.append({"char": character, "num": dictionary[character]})
+        sorted_characters.append({"char": character, "num": dictionary[character]})
 
-    characters_list.sort(reverse=True, key=sort_on)
+    sorted_characters.sort(reverse=True, key=sort_on)
     
-    return characters_list
+    return sorted_characters
